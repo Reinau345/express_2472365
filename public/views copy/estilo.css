@@ -1,0 +1,11 @@
+.contenedorFormulario{
+    padding: 50px;
+    flex-wrap: wrap;
+    background-color: bisque;
+    display: flex;
+    display: contents;
+}
+.form-control {
+    display: block;
+    width: 50% !important;
+}
