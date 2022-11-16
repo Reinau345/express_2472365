@@ -1,7 +1,8 @@
 const express = require('express')
 const app= express()
 const hbs = require('hbs')
-const port= 112 // Definir el puerto
+const port= process.env.PORT // Definir el puerto
+
 app.use(express.static('public'));
 
 hbs.registerPartials(__dirname + '/public/views/partials',function(err){});
@@ -24,10 +25,10 @@ app.get('/moduloClientes',(req,res)=>{
   })
 })
 
-//app.get('/registrarPedido',(req,res)=>{
+app.get('/registrarPedido',(req,res)=>{
 
-  // res.sendFile(__dirname +'/public/views/registrarPedido.html');
-//})
+  res.sendFile(__dirname +'/public/views/registrarPedido.html');
+})
 
 app.listen(port, () =>{
     console.log(`Escuchando por el puerto ${port}`)
